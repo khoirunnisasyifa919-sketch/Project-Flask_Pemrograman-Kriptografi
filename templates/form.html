@@ -1,43 +1,20 @@
-<!DOCTYPE html>
+
 <html>
 <head>
-    <title>Flask Encryptor</title>
+    <title>ENKRIPSI CAESAR CIPHER</title>
 
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
-
-<div class="container">
-
-    <h1>Flask Encryptor</h1>
-
-    <form action="/encrypt" method="POST">
-
-        <label>Nama Depan:</label>
-
-        <input
-            type="text"
-            name="nama_depan"
-            required
-        >
-
-        <label>Nama Belakang:</label>
-
-        <input
-            type="text"
-            name="nama_belakang"
-            required
-        >
-
-        <button type="submit">
-            Kirim
-        </button>
-
-    </form>
-
-</div>
-
+   <h2>Demo Text</h2>
+   
+   <form action="/" method="post">
+      Nama depan:<br />
+      <input type="text" name="namaDepan" size="25" /><br />
+      Nama belakang:<br />
+      <input type="text" name="namaBelakang" size="25" />
+      <p><input type="submit"  value="Enkripsi" /></p>
+   </form>
+   
 </body>
 </html>
