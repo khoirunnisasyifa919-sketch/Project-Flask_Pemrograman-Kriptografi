@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Encryptor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Flask Encryptor</h1>
+
+    <form action="/encrypt" method="POST">
+
+        <label>Nama Depan:</label>
+
+        <input
+            type="text"
+            name="nama_depan"
+            required
+        >
+
+        <label>Nama Belakang:</label>
+
+        <input
+            type="text"
+            name="nama_belakang"
+            required
+        >
+
+        <button type="submit">
+            Kirim
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
