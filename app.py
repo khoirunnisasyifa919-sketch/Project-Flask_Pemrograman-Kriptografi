@@ -14,7 +14,7 @@ def index():
       for i in range(len(p)):
          c = chr(ord(p[i]) + k)
          C = C + c
-      return render_template('response.html', nama=C)
+      return render_template('response.html',nama_asli=nama, nama=C)
    return render_template('form.html')
 
 if __name__ == '__main__':
