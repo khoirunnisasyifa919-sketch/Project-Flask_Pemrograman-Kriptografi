@@ -1,12 +1,37 @@
+<!DOCTYPE html>
 <html>
 <head>
-   <title>Demo Text</title>
+    <title>Hasil Enkripsi</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
-   <h2>Demo Text</h2>
-   
-   <p><strong>{{ nama }}</strong>, 
-   selamat datang di pemrograman Python.</p>
-   
+
+<div class="container">
+
+    <h1>Flask Encryptor</h1>
+
+    <div class="hasil">
+
+        <div class="baris">
+            <span>Nama Original:</span>
+            <span>{{ nama_asli }}</span>
+        </div>
+
+        <div class="baris">
+            <span>Nama Terenkripsi:</span>
+            <span>{{ nama_encrypt }}</span>
+        </div>
+
+    </div>
+
+    <p class="pesan">
+        Halo, Selamat Datang di Pemrograman Python!
+    </p>
+
+</div>
+
 </body>
 </html>
