@@ -1,36 +1,27 @@
-
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Hasil Enkripsi</title>
-
-
+   <title>Hasil Enkripsi Caesar Cipher</title>
 </head>
 
 <body>
 
-<div class="container">
+   <h2>Hasil Enkripsi Caesar Cipher</h2>
 
-    <h1>Hasil Enkripsi</h1>
+   <p>
+      <strong>Nama Original:</strong>
+      {{ nama_asli }}
+   </p>
 
-    <div class="hasil">
+   <p>
+      <strong>Nama Terenkripsi:</strong>
+      {{ nama }}
+   </p>
 
-        <div class="baris">
-            <span>Nama Original:</span>
-            <span>{{ nama_asli }}</span>
-        </div>
-
-        <div class="baris">
-            <span>Nama Terenkripsi:</span>
-            <span>{{ nama_encrypt }}</span>
-        </div>
-
-    </div>
-
-    <p class="pesan">
-        Halo, Selamat Datang di Pemrograman Python!
-    </p>
-
-</div>
+   <p>
+      Halo <strong>{{ nama_asli }}</strong>,
+      selamat datang di pemrograman Python!
+   </p>
 
 </body>
 </html>
