@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Hasil Enkripsi Caesar Cipher</title>
+    <title>HASIL ENKRIPSI</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-
 <body>
 
-   <h2>Hasil Enkripsi Caesar Cipher</h2>
+<div class="container">
 
-   <p>
-      <strong>Nama Original:</strong>
-      {{ nama_asli }}
-   </p>
+    <h1>HASIL ENKRIPSI</h1>
 
-   <p>
-      <strong>Nama Terenkripsi:</strong>
-      {{ nama }}
-   </p>
+    <table>
+        <tr>
+            <td><b>Nama Original:</b></td>
+            <td>{{ nama }}</td>
+        </tr>
 
-   <p>
-      Halo <strong>{{ nama_asli }}</strong>,
-      selamat datang di pemrograman Python!
-   </p>
+        <tr>
+            <td><b>Nama Terenkripsi:</b></td>
+            <td>{{ nama_encrypt }}</td>
+        </tr>
+    </table>
+
+    <p class="welcome">
+        Halo {{ nama }}. Selamat datang di Pemrograman Python!
+    </p>
+
+</div>
 
 </body>
 </html>
+     
