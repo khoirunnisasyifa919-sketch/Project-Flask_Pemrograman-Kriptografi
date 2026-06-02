@@ -11,7 +11,7 @@ body{
     justify-content:center;
     align-items:center;
 
-    background:url("static/images/download.jpg");
+    background:url("../images/download.jpg");
     background-size:cover;
     background-position:center;
 }
