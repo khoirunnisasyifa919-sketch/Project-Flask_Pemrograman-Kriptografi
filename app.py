@@ -1,24 +1,29 @@
 from flask import Flask, render_template, request
-import os
 
 application = Flask(__name__)
 
+def encrypt(teks):
+    hasil = ""
+    for huruf in teks:
+        hasil += chr(ord(huruf) + 3)
+    return hasil
+
 @application.route('/', methods=['GET', 'POST'])
 def index():
-   if request.method == 'POST':
-      namaDepan = request.form['namaDepan']
-      namaBelakang = request.form['namaBelakang']
-      nama = '%s %s' % (namaDepan, namaBelakang)
-      p = nama
-      C = ' '
-      k = 3
-      for i in range(len(p)):
-         c = chr(ord(p[i]) + k)
-         C = C + c
-      return render_template('response.html',nama_asli=nama, nama=C)
-   return render_template('form.html')
+    if request.method == 'POST':
+        nama_depan = request.form['nama_depan']
+        nama_belakang = request.form['nama_belakang']
+
+        nama = nama_depan + " " + nama_belakang
+        nama_encrypt = encrypt(nama)
+
+        return render_template(
+            'hasil.html',
+            nama=nama,
+            nama_encrypt=nama_encrypt
+        )
+
+    return render_template('index.html')
 
 if __name__ == '__main__':
-   # Disable debug mode in production
-   debug_mode = os.getenv('FLASK_DEBUG', 'False') == 'True'
-   application.run(debug=debug_mode)
+    application.run(host='0.0.0.0', port=5000)
